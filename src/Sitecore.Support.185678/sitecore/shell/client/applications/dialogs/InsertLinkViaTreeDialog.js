@@ -66,7 +66,7 @@
       if (!targetWindowValue || targetWindowValue.itemId === emptyOptionID) {
         targetWindowValue = "";
       } else {
-          var targetWindow = targetWindowValue.$displayName.trim();
+          var targetWindow = targetWindowValue.itemName.trim();
         switch (targetWindow) {
           case 'Active Browser':
             targetWindow = "";
