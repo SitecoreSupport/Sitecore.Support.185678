@@ -74,7 +74,8 @@
       if (!targetWindowValue || targetWindowValue.itemId === emptyOptionID) {
         targetWindowValue = "";
       } else {
-          var targetWindow = targetWindowValue.$displayName.trim();
+          //the fix
+          var targetWindow = targetWindowValue.itemName.trim();
         switch (targetWindow) {
           case 'Active Browser':
             targetWindow = "";
@@ -85,6 +86,8 @@
           case "Custom":
             targetWindow = customUrlID.get("text");
             break;
+          default:
+                targetWindow = "";
         }
 
         targetWindowValue = "target=\"" + targetWindow + "\"";
